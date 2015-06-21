@@ -1,0 +1,21 @@
+
+## Function that creates a chacheble matrix.
+
+setwd("/Users/alonso/Dropbox/Aprendizaje/Coursera/Data Scientist Specialization/03. Getting and Cleaning Data/week_3/UCI HAR Dataset")
+
+library(dplyr)
+
+
+activity_labels <- read.table("activity_labels.txt")
+activity_labels <- rename (activity_labels, activity_id = V1, activity_desc = V2)
+
+test_data <- read.table("test/X_test.txt")
+test_data_activities <- read.table("test/y_test.txt")
+
+observations_seq = seq(along = test_data[,1])
+
+test_data <- mutate(test_data , observation_id = observations_seq)
+test_data_activities <- mutate(test_data_activities , observation_id = observations_seq)
+
+test_data_activities <- rename(test_data_activities, activity_id = V1)
+
