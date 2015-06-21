@@ -12,5 +12,8 @@ You should create one R script called run_analysis.R that does the following.
 
 ## Steps to test:
 
-1. Run: run_analysis.R
-2. The script will generate a file calles: tidy_data.txt
+1. Run by setting the working directory to where the filed: run_analysis.R is located and call the function: source("run_analysis.R")
+2. The script reads data files
+3. The script merges the test and train data
+4. The script joins the multiple files to get descriptions, activities and subjects
+5. The script will generate a file calles: tidy_data.txt
